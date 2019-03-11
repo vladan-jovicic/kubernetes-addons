@@ -12,9 +12,13 @@ To do so, run
 
 `docker-compose -f kibana-compose up`.
 
-Since kibana is run locally, we need to create a proxy on localhost to the cluster:
+Since kibana is run locally, we need to create a proxy:
 
 `kubectl port-forward svc/elasticsearch 9200:9200 -n kube-logging`.
 
 Now, navigate to url http://localhost:5601 and start by creating index logstash*.
+
+TODO:
+- Add kibana deployment definition.
+- Create helm chart (??).
  
